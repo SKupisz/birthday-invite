@@ -14,11 +14,13 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
+    "@types/react-howler": "^5.2.0",
     "babel-plugin-styled-components": "^2.0.7",
     "framer-motion": "^7.1.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-howler": "^5.2.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

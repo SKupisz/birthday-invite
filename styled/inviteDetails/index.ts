@@ -6,6 +6,7 @@ export const InviteDetailsContainer = styled.section`
     min-height: 60vh;
     color: ${(props) => props.theme.color};
     font-family: ${(props) => props.theme.fontFamily};
+    position: relative;
 `;
 
 export const InviteDetailsContainerContent = styled.section`
