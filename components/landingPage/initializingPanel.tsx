@@ -22,6 +22,7 @@ const InitializingPanel:React.FC<InitializingPanelInterface> = ({initializeCallb
         animate={{
             opacity: isOpened ? 0 : 1
         }}
+        initial={false}
         transition={{
             duration: 0.8,
             delay: 0.6

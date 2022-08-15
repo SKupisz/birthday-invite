@@ -6,6 +6,15 @@ export const BirthdayGlobalStyle = createGlobalStyle`
         padding: 0;
     }
 
+    
+    body::-webkit-scrollbar{
+        background: ${(props) => props.theme.background};
+    }
+    body::-webkit-scrollbar-thumb{
+        background: ${(props) => props.theme.color};
+        border-radius: 10px;
+    }
+
     .block-center{
         display: block;
         margin-left: auto;

@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
+import {motion} from "framer-motion";
 import ReactHowler from 'react-howler';
 
 import {
   LandingComponentWrapper,
   LandingComponentBackground, LandingComponentContentWrapper,
 } from 'styled/landingComponent';
+
+import { InitializingPanelTextWrapper, InitializingPanelTextContainer } from 'styled/landingComponent/initializingPanel';
 
 import GlitchHeader from './glitchHeader';
 
@@ -41,8 +44,49 @@ const LandingComponent:React.FC<LandingComponentInterface> = ({toggleDetailsVisi
         onEnd={() => toggleIsSoundPlaying(!isSoundPlaying)}
       />
       <ReactHowler src="party_sound_2.mp3" ref={soundRef} loop playing={isSoundPlaying} />
-      <LandingComponentContentWrapper className="block-center">
-        {isHeaderVisible ? <GlitchHeader isPlaying={isSoundPlaying} /> : null}
+      <LandingComponentContentWrapper className="block-center" isDark={!isHeaderVisible}>
+        {isHeaderVisible ? <GlitchHeader isPlaying={isSoundPlaying} /> : <InitializingPanelTextWrapper className="block-center">
+        
+          <motion.div
+          initial={{scale: 0}}
+          animate = {{
+            scale: [0, 1.0]
+          }}
+          transition={{
+            duration: 0.4,
+            delay: 1.45
+          }}>
+            <InitializingPanelTextContainer className="block-center">
+              My dear,
+            </InitializingPanelTextContainer>
+          </motion.div>
+          <motion.div
+          initial={{scale: 0}}
+          animate = {{
+            scale: [0, 1.0]
+          }}
+          transition={{
+            duration: 0.4,
+            delay: 3.45
+          }}>
+            <InitializingPanelTextContainer className="block-center">
+            I would really love
+            </InitializingPanelTextContainer>
+          </motion.div>
+          <motion.div
+          initial={{scale: 0}}
+          animate = {{
+            scale: [0, 1.0]
+          }}
+          transition={{
+            duration: 0.4,
+            delay: 5.45
+          }}>
+            <InitializingPanelTextContainer className="block-center">
+            to invite you to my
+            </InitializingPanelTextContainer>
+          </motion.div>
+        </InitializingPanelTextWrapper>}
       </LandingComponentContentWrapper>
     </LandingComponentWrapper>
   );

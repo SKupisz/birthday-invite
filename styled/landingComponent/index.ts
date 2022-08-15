@@ -4,6 +4,10 @@ interface LandingComponentTextGlitchComponentInterface{
     color?: string
 }
 
+interface LandingComponentContentWrapperInterface {
+    isDark: boolean
+}
+
 export const LandingComponentWrapper = styled.section`
     width: 100%;
     height: fit-content;
@@ -25,14 +29,15 @@ export const LandingComponentBackground = styled.video`
     padding: 0;
 `;
 
-export const LandingComponentContentWrapper = styled.div`
+export const LandingComponentContentWrapper = styled.div<LandingComponentContentWrapperInterface>`
     width: calc(100% - 20px);
     min-height: calc(100vh - 20px);
     padding: 10px;
     text-align: center;
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,${(props) => props.isDark ? ".9" : ".3"});
     position: absolute;
     top: 0;
+    transition: background 1.4s;
 `;
 
 export const LandingComponentTextGlitchComponent = styled.div<LandingComponentTextGlitchComponentInterface>`
