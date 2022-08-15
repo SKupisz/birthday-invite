@@ -14,7 +14,7 @@ export const BirthdayGlobalStyle = createGlobalStyle`
 `;
 
 export const BirthdayStyles = {
-    background: "#121",
+    background: "#111",
     color: "#0895E6",
     fontFamily: "Mohave, sans-serif",
     helperBackground: "rgba(24,87,255,.35)",

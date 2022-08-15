@@ -7,12 +7,32 @@ interface LandingComponentTextGlitchComponentInterface{
 export const LandingComponentWrapper = styled.section`
     width: 100%;
     height: fit-content;
-    min-height: 120vh;
+    max-height: 100vh;
+    overflow-y: hidden;
     color: ${(props) => props.theme.color};
     font-family: ${(props) => props.theme.fontFamily};
     position: relative;
     top: 0vh;
     background: ${(props) => props.theme.background};
+`;
+
+export const LandingComponentBackground = styled.video`
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0vh;
+    margin: 0;
+    padding: 0;
+`;
+
+export const LandingComponentContentWrapper = styled.div`
+    width: calc(100% - 20px);
+    min-height: calc(100vh - 20px);
+    padding: 10px;
+    text-align: center;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
 `;
 
 export const LandingComponentTextGlitchComponent = styled.div<LandingComponentTextGlitchComponentInterface>`
@@ -43,22 +63,3 @@ export const LandingComponentTextGlitchComponent = styled.div<LandingComponentTe
         font-size: 6.2em;
     }
 `;  
-
-export const LandingComponentBackground = styled.video`
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 0vh;
-    margin: 0;
-    padding: 0;
-`;
-
-export const LandingComponentContentWrapper = styled.div`
-    width: calc(100% - 20px);
-    min-height: calc(120vh - 20px);
-    padding: 10px;
-    text-align: center;
-    background: rgba(0,0,0,.3);
-    position: absolute;
-    top: 0;
-`;
