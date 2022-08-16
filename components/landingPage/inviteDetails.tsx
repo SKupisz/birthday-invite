@@ -21,7 +21,7 @@ const InviteDetails:React.FC = () => (
       </InviteDetailsHeader>
       <InviteDetailsWrapper className="block-center">
         <InviteDetailsPhotoContainer>
-          <Image src={Champagne} alt="bottle of champagne" width="2000" height="2820" responsive="100vw" />
+          <Image src={Champagne} alt="bottle of champagne" width="2000" height="2820" />
         </InviteDetailsPhotoContainer>
         <InviteDetailsGap />
         <InviteDetailsContent>

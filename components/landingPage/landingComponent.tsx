@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  useEffect, useRef, useState,
+} from 'react';
 import { motion } from 'framer-motion';
 import ReactHowler from 'react-howler';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -22,13 +24,13 @@ const LandingComponent:React.FC<LandingComponentInterface> = ({ detailsVisible, 
   const [isHeaderVisible, toggleIsHeaderVisible] = useState<boolean>(false);
   const [isSoundPlaying, toggleIsSoundPlaying] = useState<boolean>(false);
 
-  const videoRef = useRef<HTMLVideoElement>();
-  const soundIntroRef = useRef<HTMLElement>();
-  const soundRef = useRef<HTMLElement>();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    videoRef.current.play();
-    setTimeout(() => toggleIsHeaderVisible(true), 6800);
+    if (videoRef.current !== null) {
+      videoRef.current.play();
+      setTimeout(() => toggleIsHeaderVisible(true), 6800);
+    }
   }, []);
 
   useEffect(() => {
@@ -42,11 +44,10 @@ const LandingComponent:React.FC<LandingComponentInterface> = ({ detailsVisible, 
       </LandingComponentBackground>
       <ReactHowler
         src="party_sound_1.mp3"
-        ref={soundIntroRef}
         playing={!isSoundPlaying}
         onEnd={() => toggleIsSoundPlaying(!isSoundPlaying)}
       />
-      <ReactHowler src="party_sound_2.mp3" ref={soundRef} loop playing={isSoundPlaying} />
+      <ReactHowler src="party_sound_2.mp3" loop playing={isSoundPlaying} />
       <LandingComponentContentWrapper className="block-center" isDark={!isHeaderVisible}>
         {isHeaderVisible ? (
           <>

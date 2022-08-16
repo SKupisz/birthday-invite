@@ -4,15 +4,15 @@ export const BirthdayGlobalStyle = createGlobalStyle`
     body{
         margin: 0;
         padding: 0;
-        background: ${(props) => props.theme.background};
+        background: #111;
     }
 
     
     body::-webkit-scrollbar{
-        background: ${(props) => props.theme.background};
+        background: #111;
     }
     body::-webkit-scrollbar-thumb{
-        background: ${(props) => props.theme.color};
+        background: #0895E6;
         border-radius: 10px;
     }
 

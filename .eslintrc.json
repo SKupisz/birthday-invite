@@ -27,6 +27,9 @@
         "max-len": "warn",
         "react/function-component-definition": "off",
         "no-unused-vars": "warn",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "no-unused-expressions": "off",
+        "yoda": "off",
+        "valid-typeof": "off"
     }
 }

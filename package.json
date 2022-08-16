@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
     "@types/react-howler": "^5.2.0",
+    "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.0.7",
     "framer-motion": "^7.1.0",
     "next": "12.2.5",
