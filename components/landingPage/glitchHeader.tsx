@@ -25,7 +25,7 @@ const GlitchHeader:React.FC<GlitchHeaderInterface> = ({ isPlaying } : GlitchHead
         }}
       >
         <motion.span
-          animate={{ x: [0, 2, 0] }}
+          animate={{ x: isPlaying ? [0, 2.5, 0] : [0, 0] }}
           transition={{
             duration: glitchDuration,
             repeat: 'Infinity',
@@ -36,7 +36,7 @@ const GlitchHeader:React.FC<GlitchHeaderInterface> = ({ isPlaying } : GlitchHead
           Birthday party
         </motion.span>
         <motion.span
-          animate={{ y: [0, 2, 0] }}
+          animate={{ y: isPlaying ? [0, 2.5, 0] : [0, 0] }}
           transition={{
             duration: glitchDuration,
             repeat: 'Infinity',
@@ -47,7 +47,18 @@ const GlitchHeader:React.FC<GlitchHeaderInterface> = ({ isPlaying } : GlitchHead
           Birthday party
         </motion.span>
         <motion.span
-          animate={{ scale: [1, 0.98, 1] }}
+          animate={{ y: isPlaying ? [0, 4, 0] : [0, 0] }}
+          transition={{
+            duration: glitchDuration,
+            repeat: 'Infinity',
+          }}
+          className="block-center"
+          style={{ color: 'green' }}
+        >
+          Birthday party
+        </motion.span>
+        <motion.span
+          animate={{ scale: isPlaying ? [1, 0.98, 1] : [1, 1] }}
           transition={{
             duration: glitchDuration,
             repeat: 'Infinity',
