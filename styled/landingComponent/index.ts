@@ -21,12 +21,34 @@ export const LandingComponentWrapper = styled.section`
 `;
 
 export const LandingComponentBackground = styled.video`
-    width: 100%;
-    height: auto;
+    height: 100%;
+    max-height: 100vh;
+    width: auto;
     position: relative;
     top: 0vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+
+    & > source {
+        max-width: 100%;
+        overflow: hidden !important;
+    }
+    
+
+    @media screen and (min-width: 1024px){
+        width: 100%;
+        height: auto;
+        max-height: fit-content;
+        position: relative;
+        top: 0vh;
+        margin: 0;
+        padding: 0;
+        & > source {
+            max-width: auto;
+            overflow: auto;
+        }
+    }
 `;
 
 export const LandingComponentContentWrapper = styled.div<LandingComponentContentWrapperInterface>`
@@ -68,3 +90,21 @@ export const LandingComponentTextGlitchComponent = styled.div<LandingComponentTe
         font-size: 6.2em;
     }
 `;  
+
+export const GoToTheDetailsButton = styled.button`
+    border: none;
+    border-radius: 10px;
+    color: ${(props) => props.theme.color};
+    background: transparent;
+    font-size: 4.5em;
+    padding: 20px 40px;
+    text-align: center;
+    position: relative;
+    top: 40vh;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover{
+        filter: brightness(70%);
+    }
+`;

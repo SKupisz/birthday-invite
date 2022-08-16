@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {motion} from "framer-motion";
+import { motion } from 'framer-motion';
 import ReactHowler from 'react-howler';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {
   LandingComponentWrapper,
   LandingComponentBackground, LandingComponentContentWrapper,
+  GoToTheDetailsButton,
 } from 'styled/landingComponent';
 
 import { InitializingPanelTextWrapper, InitializingPanelTextContainer } from 'styled/landingComponent/initializingPanel';
@@ -12,10 +14,11 @@ import { InitializingPanelTextWrapper, InitializingPanelTextContainer } from 'st
 import GlitchHeader from './glitchHeader';
 
 interface LandingComponentInterface{
+  detailsVisible: boolean,
   toggleDetailsVisible: (newState: boolean) => void
 }
 
-const LandingComponent:React.FC<LandingComponentInterface> = ({toggleDetailsVisible} : LandingComponentInterface) => {
+const LandingComponent:React.FC<LandingComponentInterface> = ({ detailsVisible, toggleDetailsVisible } : LandingComponentInterface) => {
   const [isHeaderVisible, toggleIsHeaderVisible] = useState<boolean>(false);
   const [isSoundPlaying, toggleIsSoundPlaying] = useState<boolean>(false);
 
@@ -29,7 +32,7 @@ const LandingComponent:React.FC<LandingComponentInterface> = ({toggleDetailsVisi
   }, []);
 
   useEffect(() => {
-    if(isSoundPlaying) toggleDetailsVisible(true);
+    if (isSoundPlaying) toggleDetailsVisible(true);
   }, [isSoundPlaying]);
 
   return (
@@ -45,48 +48,62 @@ const LandingComponent:React.FC<LandingComponentInterface> = ({toggleDetailsVisi
       />
       <ReactHowler src="party_sound_2.mp3" ref={soundRef} loop playing={isSoundPlaying} />
       <LandingComponentContentWrapper className="block-center" isDark={!isHeaderVisible}>
-        {isHeaderVisible ? <GlitchHeader isPlaying={isSoundPlaying} /> : <InitializingPanelTextWrapper className="block-center">
-        
-          <motion.div
-          initial={{scale: 0}}
-          animate = {{
-            scale: [0, 1.0]
-          }}
-          transition={{
-            duration: 0.4,
-            delay: 1.45
-          }}>
-            <InitializingPanelTextContainer className="block-center">
-              My dear,
-            </InitializingPanelTextContainer>
-          </motion.div>
-          <motion.div
-          initial={{scale: 0}}
-          animate = {{
-            scale: [0, 1.0]
-          }}
-          transition={{
-            duration: 0.4,
-            delay: 3.45
-          }}>
-            <InitializingPanelTextContainer className="block-center">
-            I would really love
-            </InitializingPanelTextContainer>
-          </motion.div>
-          <motion.div
-          initial={{scale: 0}}
-          animate = {{
-            scale: [0, 1.0]
-          }}
-          transition={{
-            duration: 0.4,
-            delay: 5.45
-          }}>
-            <InitializingPanelTextContainer className="block-center">
-            to invite you to my
-            </InitializingPanelTextContainer>
-          </motion.div>
-        </InitializingPanelTextWrapper>}
+        {isHeaderVisible ? (
+          <>
+            <GlitchHeader isPlaying={isSoundPlaying} />
+            {detailsVisible ? (
+              <GoToTheDetailsButton type="button" onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
+                <ExpandMoreIcon style={{ color: 'inherit', fontSize: 'inherit' }} />
+              </GoToTheDetailsButton>
+            ) : null }
+          </>
+        ) : (
+          <InitializingPanelTextWrapper className="block-center">
+
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{
+                scale: [0, 1.0],
+              }}
+              transition={{
+                duration: 0.4,
+                delay: 1.45,
+              }}
+            >
+              <InitializingPanelTextContainer className="block-center">
+                My dear,
+              </InitializingPanelTextContainer>
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{
+                scale: [0, 1.0],
+              }}
+              transition={{
+                duration: 0.4,
+                delay: 3.45,
+              }}
+            >
+              <InitializingPanelTextContainer className="block-center">
+                I would really love
+              </InitializingPanelTextContainer>
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{
+                scale: [0, 1.0],
+              }}
+              transition={{
+                duration: 0.4,
+                delay: 5.45,
+              }}
+            >
+              <InitializingPanelTextContainer className="block-center">
+                to invite you to my
+              </InitializingPanelTextContainer>
+            </motion.div>
+          </InitializingPanelTextWrapper>
+        )}
       </LandingComponentContentWrapper>
     </LandingComponentWrapper>
   );
