@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, TransitionDefinition } from 'framer-motion';
 
 import { LandingComponentTextGlitchComponent } from 'styled/landingComponent';
 
@@ -8,7 +8,7 @@ interface GlitchHeaderInterface{
 }
 
 const GlitchHeader:React.FC<GlitchHeaderInterface> = ({ isPlaying } : GlitchHeaderInterface) => {
-  const glitchDuration = 0.45;
+  const glitchDuration:TransitionDefinition = 0.45;
 
   return (
     <LandingComponentTextGlitchComponent className="block-center">

@@ -3,8 +3,6 @@ import React from 'react';
 
 import InviteDetails from 'components/landingPage/inviteDetails';
 
-const PartyDetails:NextPage = () => {
-    return <InviteDetails />
-};
+const PartyDetails:NextPage = () => <InviteDetails />;
 
 export default PartyDetails;

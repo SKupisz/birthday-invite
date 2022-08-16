@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import React, { useState } from 'react';
-import Head from "next/head";
+import Head from 'next/head';
 import InviteDetails from 'components/landingPage/inviteDetails';
 import LandingComponent from 'components/landingPage/landingComponent';
 import InitializingPanel from 'components/landingPage/initializingPanel';
