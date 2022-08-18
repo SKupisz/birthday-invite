@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const InviteDetailsContainer = styled.section`
     width: 100%;
     height: fit-content;
-    min-height: 60vh;
+    min-height: 80vh;
     color: ${(props) => props.theme.color};
     font-family: ${(props) => props.theme.fontFamily};
     position: relative;
+
+    @media screen and (min-width: 768px){
+        min-height: 60vh;
+    }
 `;
 
 export const InviteDetailsContainerContent = styled.section`
@@ -87,7 +91,8 @@ export const InviteDetailsGap = styled.div`
 
 export const InviteDetailsContent = styled.div`
     width: calc(100% - 20px);
-    height: calc(45vh - 20px);
+    height: calc(50vh - 20px);
+    min-height: fit-content;
     padding: 10px;
     padding-top: 1vh;
     display: block;
@@ -96,6 +101,7 @@ export const InviteDetailsContent = styled.div`
     text-shadow: ${(props) => props.theme.textShadow};
     box-shadow: ${(props) => props.theme.boxShadow};
     border-radius: 10px;
+    position: relative;
 
     @media screen and (min-width: 375px){
         width: calc(95% - 20px);
@@ -151,11 +157,12 @@ export const InviteDetailsContentAnswer = styled.div`
     margin-bottom: 2vh;
 
     @media screen and (min-width: 425px){
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     @media screen and (min-width: 768px){ 
         margin-bottom: 3vh;
+        font-size: 1.2em;
     }
 
     @media screen and (min-width: 1440px){

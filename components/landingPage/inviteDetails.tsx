@@ -9,8 +9,8 @@ import {
   InviteDetailsContentAnswer,
 } from 'styled/inviteDetails';
 
-import Champagne from 'assets/champagne.jpg';
-import InfoBackground from 'assets/infoBackground.jpg';
+import Champagne from 'assets/champagne.webp';
+import InfoBackground from 'assets/infoBackground.webp';
 
 const InviteDetails:React.FC = () => (
   <InviteDetailsContainer className="block-center">
