@@ -17,9 +17,11 @@ export const InviteDetailsContainerContent = styled.section`
     width: calc(100% - 20px);
     padding: 10px;
     min-height: inherit;
+    height: inherit;
     background: rgba(0,0,0,.5);
     position: relative;
     top: 0vh;
+    overflow-x: hidden;
 `;
 
 export const InviteDetailsHeader = styled.header`
