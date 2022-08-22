@@ -12,6 +12,7 @@ export const BirthdayGiftsContainer = styled.section`
     text-shadow: ${(props) => props.theme.textShadow};
     min-height: 100vh;
     height: fit-content;
+    position: relative;
 `;
 
 export const BirthdayGiftsHeader = styled.header`

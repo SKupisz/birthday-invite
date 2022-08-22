@@ -4,6 +4,7 @@ import Head from 'next/head';
 import InviteDetails from 'components/landingPage/inviteDetails';
 import LandingComponent from 'components/landingPage/landingComponent';
 import InitializingPanel from 'components/landingPage/initializingPanel';
+import BirthdayGifts from 'components/birthdayGifts';
 
 const Home: NextPage = () => {
   const [isInitialized, toggleIsInitialized] = useState<boolean>(false);
@@ -18,7 +19,8 @@ const Home: NextPage = () => {
         <>
           <LandingComponent detailsVisible={detailsVisible} toggleDetailsVisible={toggleDetailsVisible} />
           {
-            detailsVisible ? <InviteDetails /> : null
+            detailsVisible ? <><InviteDetails />
+            <BirthdayGifts /></> : null
           }
         </>
       ) : <InitializingPanel initializeCallback={toggleIsInitialized} />}
