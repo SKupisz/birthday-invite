@@ -29,6 +29,10 @@ export const BirthdayGiftsModeContainer = styled.div`
     width: 100%;
     height: auto;
     text-align: center;
+
+    & > a{
+        color: inherit;
+    }
 `;
 
 export const BirthdayGiftsModeChooser = styled.button`

@@ -19,6 +19,11 @@ const GiftsList: {
     category: "single"
 },
 {
+    nameOfAGift: "A hip flask",
+    link: "https://www.militaria.pl/mil-tec/piersiowka_mil-tec_woodland_220_ml_14521020-008_p1004319.xml",
+    category: "single"
+},
+{
     nameOfAGift: "This T-shirt from militaria.pl (size M)",
     link: "https://www.militaria.pl/tigerwood/koszulka_t-shirt_tigerwood_roza_wiatrow_-_brazowa_p1003575.xml?wkm=Warianty_produktowe",
     category: "single"
@@ -52,6 +57,11 @@ const GiftsList: {
     nameOfAGift: "Minecraft computer game (yes, I'm serious xd)",
     link: "https://www.minecraft.net/pl-pl",
     category: "single"
+},
+{
+    nameOfAGift: "Mil-Tec US MC Sword replica",
+    link: "https://www.militaria.pl/mil-tec/szabla_mil-tec_us_mc_sword_15415000_p1015392.xml",
+    category: "multi"
 },
 {
     nameOfAGift: "Some good alcohol",

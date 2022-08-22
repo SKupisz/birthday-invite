@@ -58,19 +58,26 @@ const BirthdayGifts:NextPage = () => {
         >
           <BirthdayGiftsModeContainer>
             {
-              modeChosen !== 0 ? GiftsList.map((elem) => ((modeChosen === 1 && elem.category !== 'multi')
+              modeChosen !== 0 ? (
+                <>
+                  {GiftsList.map((elem) => ((modeChosen === 1 && elem.category !== 'multi')
               || (modeChosen === 2 && elem.category !== 'single')
-                ? elem.link !== '' ? (
-                  <Link href={elem.link} target="_blank">
-                    <BirthdayGiftsGiftContainer className="block-center" isLink>
-                      {elem.nameOfAGift}
-                    </BirthdayGiftsGiftContainer>
-                  </Link>
-                ) : (
-                  <BirthdayGiftsGiftContainer className="block-center" isLink={false}>
-                    {elem.nameOfAGift}
+                    ? elem.link !== '' ? (
+                      <a href={elem.link} target="_blank" rel="noopener noreferrer">
+                        <BirthdayGiftsGiftContainer className="block-center" isLink>
+                          {elem.nameOfAGift}
+                        </BirthdayGiftsGiftContainer>
+                      </a>
+                    ) : (
+                      <BirthdayGiftsGiftContainer className="block-center" isLink={false}>
+                        {elem.nameOfAGift}
+                      </BirthdayGiftsGiftContainer>
+                    ) : null))}
+                  <BirthdayGiftsGiftContainer className="block-center" isLink onClick={() => setModeChosen(0)}>
+                    Go back
                   </BirthdayGiftsGiftContainer>
-                ) : null)) : null
+                </>
+              ) : null
             }
 
           </BirthdayGiftsModeContainer>

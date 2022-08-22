@@ -93,8 +93,8 @@ export const InviteDetailsGap = styled.div`
 
 export const InviteDetailsContent = styled.div`
     width: calc(100% - 20px);
-    height: calc(50vh - 20px);
-    min-height: fit-content;
+    min-height: calc(50vh - 20px);
+    height: fit-content;
     padding: 10px;
     padding-top: 1vh;
     display: block;
