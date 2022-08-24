@@ -19,8 +19,12 @@ const Home: NextPage = () => {
         <>
           <LandingComponent detailsVisible={detailsVisible} toggleDetailsVisible={toggleDetailsVisible} />
           {
-            detailsVisible ? <><InviteDetails />
-            <BirthdayGifts /></> : null
+            detailsVisible ? (
+              <>
+                <InviteDetails />
+                <BirthdayGifts />
+              </>
+            ) : null
           }
         </>
       ) : <InitializingPanel initializeCallback={toggleIsInitialized} />}
