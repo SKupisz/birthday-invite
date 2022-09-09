@@ -9,18 +9,18 @@ const GiftsList: {
     category: "single"
 },
 {
-    nameOfAGift: "Sport version of an AK 47 carabine",
-    link: "https://www.militaria.pl/cyma/karabinek_szturmowy_aeg_cyma_cm028_ak47_cym-01-000049_p13815.xml",
-    category: "multi"
+    nameOfAGift: "This M92 replica (an additional can of green gas nicely seen)",
+    link: "https://www.militaria.pl/action_sport_games/pistolet_asg_gg_m92f_black_11555_p5697.xml?cat=102",
+    category: "combined"
 },
 {
     nameOfAGift: "A filnt",
-    link: "https://www.militaria.pl/survival,_bushcraft,_turystyka/przetrwanie/krzesiwa_i_rozpalki_c2822.xml",
+    link: "https://www.militaria.pl/badger_outdoor/krzesiwo_badger_outdoor_fire_rod_bo-fs-fr_p89294.xml?cat=2822",
     category: "single"
 },
 {
     nameOfAGift: "A hip flask",
-    link: "https://www.militaria.pl/mil-tec/piersiowka_mil-tec_woodland_220_ml_14521020-008_p1004319.xml",
+    link: "https://www.militaria.pl/survival,_bushcraft,_turystyka/piersiowki_c2310.xml",
     category: "single"
 },
 {
@@ -41,7 +41,7 @@ const GiftsList: {
 {
     nameOfAGift: "Lego Imperial TIE Fighter™",
     link: "https://www.lego.com/pl-pl/product/imperial-tie-fighter-75300",
-    category: "single"
+    category: "multi"
 },
 {
     nameOfAGift: "Anti stress enter button",
@@ -59,8 +59,8 @@ const GiftsList: {
     category: "single"
 },
 {
-    nameOfAGift: "Mil-Tec US MC Sword replica",
-    link: "https://www.militaria.pl/mil-tec/szabla_mil-tec_us_mc_sword_15415000_p1015392.xml",
+    nameOfAGift: "Watch dogs game (first part)",
+    link: "",
     category: "multi"
 },
 {
