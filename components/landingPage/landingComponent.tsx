@@ -53,10 +53,13 @@ const LandingComponent:React.FC<LandingComponentInterface> = ({ detailsVisible, 
           <>
             <GlitchHeader isPlaying={isSoundPlaying} />
             {detailsVisible ? (
-              <GoToTheDetailsButton type="button" onClick={() => window.scroll({
-                top: 750,
-                behavior: "smooth"
-              })}>
+              <GoToTheDetailsButton
+                type="button"
+                onClick={() => window.scroll({
+                  top: 750,
+                  behavior: 'smooth',
+                })}
+              >
                 <ExpandMoreIcon style={{ color: 'inherit', fontSize: 'inherit' }} />
               </GoToTheDetailsButton>
             ) : null }
