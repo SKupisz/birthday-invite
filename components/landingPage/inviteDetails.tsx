@@ -29,7 +29,7 @@ const InviteDetails:React.FC = () => (
             When?
           </InviteDetailsContentHeader>
           <InviteDetailsContentAnswer className="block-center">
-            The 1st of October, 2022
+            {process.env.NEXT_PUBLIC_PARTY_DATE}
           </InviteDetailsContentAnswer>
           <InviteDetailsContentHeader className="block-center">
             Where?
